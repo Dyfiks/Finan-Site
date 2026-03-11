@@ -1,12 +1,8 @@
 body{
-font-family: Arial;
-margin:0%;
-background:white;
-padding: 0%;
 font-family:'Nunito', sans-serif;
 margin:0;
-background:#f7f7f7;
 padding:0;
+background:#f7f7f7;
 }
 
 /* BARRA SUPERIOR ESCURA */
@@ -31,6 +27,7 @@ nav a{
 margin:0 15px;
 text-decoration:none;
 color:white;
+flex-wrap:wrap;
 }
 
 .login{
@@ -88,11 +85,11 @@ border-radius:20px;
 /* FEATURES */
 
 .feature-section{
-height:100vh;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:80px;
+padding:80px 20px;
 background:white;
 border-top:1px solid #eee;
 }
@@ -129,7 +126,7 @@ margin-top:20px;
 
 .feature-img img{
 width:250px;
-padding: 130px;
+max-width:100%;
 }
 
 /* DOWNLOAD */
@@ -168,11 +165,7 @@ justify-content:space-between;
     height: 65px;
 }
 
-@media screen and (max-width: 768px) {
-    .feature-container{
-        width: 100%;
-        flex-direction: column;
-    }
+@media screen and (max-width: 768px){
 
 .hero{
 flex-direction:column;
@@ -180,18 +173,14 @@ text-align:center;
 padding:40px 20px;
 }
 
-.hero-text{
-max-width:100%;
+.feature-container{
+flex-direction:column;
+gap:40px;
+width:100%;
 }
 
-.hero-img{
-display:flex;
-justify-content:center;
-}
-
-.hero-img img{
-max-width:350px;
-
+.feature-img img{
+width:200px;
 }
 
 }
